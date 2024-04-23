@@ -1,0 +1,7 @@
+﻿@cloud.core.database_HostAddress = http://localhost:5275
+
+GET {{cloud.core.database_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+

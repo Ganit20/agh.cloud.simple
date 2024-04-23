@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  cloud.core.api:
+    image: ${DOCKER_REGISTRY-}cloudcore
+    build:
+      context: .
+      dockerfile: cloud.core.api/Dockerfile
+
+  cloud.core.database:
+    image: ${DOCKER_REGISTRY-}cloudcore
+    build:
+      context: .
+      dockerfile: cloud.core.database/Dockerfile
+

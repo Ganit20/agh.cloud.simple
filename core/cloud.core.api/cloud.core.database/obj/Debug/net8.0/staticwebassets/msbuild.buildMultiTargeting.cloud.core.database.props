@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/cloud.core.database.props" />
+</Project>

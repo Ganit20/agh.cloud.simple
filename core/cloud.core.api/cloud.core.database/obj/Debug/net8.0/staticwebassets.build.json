@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kpw+nhPAwDMIP8THABADefBlU/b5ZU6SLW8OiZn9kyE=",
+  "Source": "cloud.core.database",
+  "BasePath": "_content/cloud.core.database",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

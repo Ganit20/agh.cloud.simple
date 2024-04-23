@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="{B84BE50C-648B-44D9-86D4-DF7B0852C2AF}|Default">
+  <DisabledProjects>
+    <String>cloud.core.database/cloud.core.database.interf/cloud.core.database.interf.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/Controllers/FileController.cs" relfile="cloud.core.api/Controllers/FileController.cs" line="33" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.database.cloud.core.database PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="cloud.core.api/Services/FileService.cs">
+    <Files>
+      <File FileName="cloud.core.api/Program.cs" Line="41" Column="1" />
+      <File FileName="docker-compose.yml" Line="13" Column="17" />
+      <File FileName="cloud.core.api/Dockerfile" />
+      <File FileName="cloud.core.database/Program.cs" />
+      <File FileName="cloud.core.database/Dockerfile" />
+      <File FileName="../cloud.core.database.interf/IDbUserApi.cs" />
+      <File FileName="cloud.core.api/Properties/launchSettings.json" Line="12" Column="7" />
+      <File FileName="cloud.core.api/Controllers/FileController.cs" Line="20" Column="11" />
+      <File FileName="cloud.core.api/appsettings.json" Line="1" Column="1" />
+      <File FileName="cloud.core.database/appsettings.json" Line="1" Column="1" />
+      <File FileName="cloud.core.database/Properties/launchSettings.json" Line="17" Column="19" />
+      <File FileName="cloud.core.api/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="cloud.core.objects/Model/UploadFileRequest.cs" Line="6" Column="15" />
+      <File FileName="cloud.core.api/cloud.core.api.http" Line="1" Column="1" />
+      <File FileName="docker-compose.override.yml" Line="17" Column="25" />
+      <File FileName="cloud.core.objects/Model/FileList.cs" Line="6" Column="26" />
+      <File FileName="cloud.core.objects/Enums/FileTypes.cs" Line="10" Column="10" />
+      <File FileName="cloud.core.api/Services/FileService.cs" Line="55" Column="85" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="cloud.core.api" expanded="True">
+            <Node name="api" expanded="True">
+              <Node name="cloud.core.api" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Properties" expanded="True" />
+                <Node name="Services" expanded="True">
+                  <Node name="FileService.cs" selected="True" />
+                </Node>
+                <Node name="appsettings.json" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="cloud.core.objects" expanded="True">
+              <Node name="Enums" expanded="True" />
+              <Node name="Model" expanded="True" />
+            </Node>
+            <Node name="docker-compose" expanded="True">
+              <Node name="docker-compose.yml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.api.cloud.core.api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

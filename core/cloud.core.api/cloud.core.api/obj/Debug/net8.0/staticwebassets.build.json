@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZMKb3xDjK6SvO4aNwp2H4Um2gFmFaEqd4m8aL3TkRGw=",
+  "Source": "cloud.core.api",
+  "BasePath": "_content/cloud.core.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

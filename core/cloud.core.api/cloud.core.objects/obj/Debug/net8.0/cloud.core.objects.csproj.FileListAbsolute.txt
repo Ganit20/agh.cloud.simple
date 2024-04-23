@@ -1,0 +1,12 @@
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/bin/Debug/net8.0/cloud.core.objects.deps.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/bin/Debug/net8.0/cloud.core.objects.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/bin/Debug/net8.0/cloud.core.objects.pdb
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.csproj.AssemblyReference.cache
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.AssemblyInfoInputs.cache
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.AssemblyInfo.cs
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.csproj.CoreCompileInputs.cache
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/refint/cloud.core.objects.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.pdb
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/ref/cloud.core.objects.dll

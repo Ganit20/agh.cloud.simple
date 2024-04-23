@@ -1,0 +1,15 @@
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/bin/Debug/net8.0/cloud.core.database.interf.deps.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/bin/Debug/net8.0/cloud.core.database.interf.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/bin/Debug/net8.0/cloud.core.database.interf.pdb
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/bin/Debug/net8.0/cloud.core.objects.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/bin/Debug/net8.0/cloud.core.objects.pdb
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.csproj.AssemblyReference.cache
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.AssemblyInfoInputs.cache
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.AssemblyInfo.cs
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.csproj.CoreCompileInputs.cache
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.csproj.CopyComplete
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/refint/cloud.core.database.interf.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.pdb
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/ref/cloud.core.database.interf.dll
