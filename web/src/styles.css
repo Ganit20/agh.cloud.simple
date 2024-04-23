@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+html {
+  background-color: rgba(204, 204, 204, 0.15);
+}
+@import "primeicons/primeicons.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

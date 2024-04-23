@@ -1,0 +1,42 @@
+<p-toolbar
+  styleClass="bg-gray-900 shadow-2"
+  [style]="{
+    margin: '0',
+    border: 'none',
+    padding: '2 2rem',
+    'border-radius': '0',
+    'box-shadow': '0 3px 5px #00000005,0 0 2px #0000000d,0 1px 4px #00000014'
+  }"
+>
+  <ng-template pTemplate="start">
+    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
+  </ng-template>
+  <ng-template pTemplate="center">
+    <div class="flex flex-wrap align-items-center gap-3">
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-home text-2xl"></i>
+      </button>
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-user text-2xl"></i>
+      </button>
+      <button
+        class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
+      >
+        <i class="pi pi-search text-2xl"></i>
+      </button>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center gap-2">
+      <p-avatar
+        image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+        shape="circle"
+      />
+      <span class="font-bold text-bluegray-50">Amy Elsner</span>
+    </div>
+  </ng-template>
+</p-toolbar>

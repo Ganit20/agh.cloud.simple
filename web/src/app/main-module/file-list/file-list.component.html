@@ -1,0 +1,24 @@
+<div class="main-container">
+  <p-breadcrumb
+    class="max-w-full"
+    [model]="breadcrumbItems"
+    [home]="{ icon: 'pi pi-home' }"
+  ></p-breadcrumb>
+  <div class="list-container">
+    <div *ngFor="let file of files()">
+      <p-card
+        *ngIf="file"
+        [header]="file.name"
+        [ngSwitch]="file.type"
+        [style]="{ width: '300px' }"
+      >
+        <ng-template pTemplate="header">
+          <app-image-file
+            *ngSwitchCase="types.image"
+            [file]="file"
+          ></app-image-file>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>

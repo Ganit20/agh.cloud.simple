@@ -1,0 +1,17 @@
+<p-card
+  [style]="{
+    height: ' 70vh',
+    'border-radius': '12px',
+    'box-shadow': '0 3px 5px #00000005,0 0 2px #0000000d,0 1px 4px #00000014'
+  }"
+>
+  <p-button [text]="true" [raised]="true" (onClick)="showDialog()">
+    <i class="pi pi-user" style="font-size: 2.5rem"></i>
+    Dodaj
+  </p-button>
+
+  <p-panelMenu [model]="items" [style]="{ width: '300px' }"></p-panelMenu>
+</p-card>
+<p-dialog [(visible)]="uploadVisible" [style]="{ width: '50vw' }">
+  <app-file-upload></app-file-upload>
+</p-dialog>

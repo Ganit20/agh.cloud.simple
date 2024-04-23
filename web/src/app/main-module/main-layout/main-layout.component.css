@@ -1,0 +1,14 @@
+.layout-sidebar {
+  width: min-content;
+}
+.internal-container {
+  display: flex;
+  padding: 2rem;
+}
+app-side-menu {
+  background-color: linear-gradient(
+    to right,
+    var(--bluegray-500),
+    var(--bluegray-800)
+  );
+}

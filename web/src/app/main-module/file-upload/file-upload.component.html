@@ -1,0 +1,9 @@
+<p-fileUpload
+  mode="basic"
+  chooseLabel="Choose"
+  name="files[]"
+  url="http://localhost:49248/api/file"
+  [customUpload]="true"
+  (uploadHandler)="uploadFile($event)"
+  accept="image/*"
+></p-fileUpload>

@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div>
+    <div class="navbar">
+      <app-nav-bar></app-nav-bar>
+    </div>
+  </div>
+  <div class="internal-container">
+    <div class="layout-sidebar">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div style="width: 100%; margin-left: 2rem">
+      <p-card [style]="{ width: '100%' }">
+        <router-outlet />
+      </p-card>
+    </div>
+  </div>
+</div>
