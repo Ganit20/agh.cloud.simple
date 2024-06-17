@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "4Xy7CzC++EwFIDnnbN2rxo8wzxJ5PBb8XQ49QyK0+qknmuvoaLFIPet8H+EZ/XQ4rfbc7tp8HK3rPBc0qnENFg==",
+  "dgSpecHash": "zxKDT7a8dmef+uA7Wn7dz4CeWmMJiw1ipvgL1ZNJl6UC/oX6j4s5Ew8VDixxDAggp9v+TYitRy+LGLeijZEArQ==",
   "success": true,
   "projectFilePath": "/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/cloud.core.api.csproj",
   "expectedPackageFiles": [
+    "/Users/bartlomiejsulek/.nuget/packages/bcrypt/1.0.0/bcrypt.1.0.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/ffmpegcore/5.1.0/ffmpegcore.5.1.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/instances/3.0.0/instances.3.0.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.6/microsoft.aspnetcore.authentication.jwtbearer.8.0.6.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http/2.2.2/microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -23,6 +26,12 @@
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.extensions.objectpool/2.2.0/microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.identitymodel.abstractions/7.6.0/microsoft.identitymodel.abstractions.7.6.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.6.0/microsoft.identitymodel.jsonwebtokens.7.6.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.identitymodel.logging/7.6.0/microsoft.identitymodel.logging.7.6.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/microsoft.identitymodel.tokens/7.6.0/microsoft.identitymodel.tokens.7.6.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
@@ -32,10 +41,22 @@
     "/Users/bartlomiejsulek/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/system.buffers/4.5.0/system.buffers.4.5.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/system.identitymodel.tokens.jwt/7.6.0/system.identitymodel.tokens.jwt.7.6.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/system.text.json/7.0.2/system.text.json.7.0.2.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/xabe.ffmpeg/5.2.6/xabe.ffmpeg.5.2.6.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/xabe.ffmpeg.downloader/5.2.6/xabe.ffmpeg.downloader.5.2.6.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BCrypt 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BCrypt",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

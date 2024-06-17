@@ -13,7 +13,7 @@ namespace cloud.core.database.DbContexts
         { }
         public virtual DbSet<DbUser> Users { get; set; }
 		public virtual DbSet<DbSubscription> Subscriptions { get; set; }
-		public virtual DbSet<DbUserFilesData> UserFilesDatas { get; set; }
+		public virtual DbSet<DbUserFilesData> UserFilesData { get; set; }
        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

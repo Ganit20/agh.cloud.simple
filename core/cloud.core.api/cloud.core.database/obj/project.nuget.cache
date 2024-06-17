@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Amifaa+JImuzPSC2cAYGAH1bVxixf3LmEp29XPjgyhG7TACbENURTBxJ4QqacQ1kwDzefgVcCAqXxakK/QpAAA==",
+  "dgSpecHash": "hTPWjN21Mnz2WJUbyKBD+75G91JkjGNtz1Lhwt7a1M+uQKsildNDwhfhgEE1xwlQrp3EwQc1RT08DMiMlNftVw==",
   "success": true,
   "projectFilePath": "/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/cloud.core.database.csproj",
   "expectedPackageFiles": [
+    "/Users/bartlomiejsulek/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http/2.2.2/microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
@@ -35,8 +37,10 @@
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.2/npgsql.entityframeworkcore.postgresql.8.0.2.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/restease/1.6.4/restease.1.6.4.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
@@ -58,5 +62,16 @@
     "/Users/bartlomiejsulek/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 13.0.1 was resolved.",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

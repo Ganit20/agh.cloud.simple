@@ -8,6 +8,7 @@ namespace cloud.core.objects.Enums
         Video,
         Audio,
         Other,
+        Folder
     }
 }
 

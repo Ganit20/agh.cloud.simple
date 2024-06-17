@@ -42,3 +42,14 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Instances.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Xabe.FFmpeg.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Xabe.FFmpeg.Downloader.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/obj/Debug/net8.0/cloud.core.api.sourcelink.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/version.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/ff/version.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

@@ -30,3 +30,13 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/obj/Debug/docker-compose.dcproj.CopyComplete
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Xabe.FFmpeg.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Xabe.FFmpeg.Downloader.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/version.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/ff/version.json
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Tokens.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/System.IdentityModel.Tokens.Jwt.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Protocols.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Logging.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Abstractions.dll

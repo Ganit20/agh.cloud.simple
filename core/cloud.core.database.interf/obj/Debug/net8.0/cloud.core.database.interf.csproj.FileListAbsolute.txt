@@ -13,3 +13,4 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/refint/cloud.core.database.interf.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.pdb
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/ref/cloud.core.database.interf.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.database.interf/obj/Debug/net8.0/cloud.core.database.interf.sourcelink.json

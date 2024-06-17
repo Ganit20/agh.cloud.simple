@@ -11,7 +11,7 @@ namespace cloud.core.api.Services
 	public class FileService
 	{
 		public async Task<List<FilePreview>> GetFileList(string path) {
-            var fileList = Directory.GetFiles("/");
+            var fileList = Directory.GetFiles(path);
             List<FilePreview> result = new();
             foreach(var file in fileList)
             {
@@ -20,10 +20,25 @@ namespace cloud.core.api.Services
                     Name = file.Substring(file.LastIndexOf("/") + 1),
                     Size = new FileInfo(file).Length,
                     Type = GetFileType(file),
-                    Thumbnail = await GetFileThumbnailAsync(file)
+                    Thumbnail = await GetFileThumbnailAsync(file),
+                    LastModified=new FileInfo(file).LastWriteTime
+
                 });
             }
-            return result;
+            var folders =Directory.GetDirectories(path);
+            foreach(var folder in folders)
+            {
+                result.Add(new FilePreview()
+                {
+                    Name = folder.Substring(folder.LastIndexOf("/") + 1),
+                    Size = 0,
+                    Type = FileTypes.Folder,
+                    Thumbnail = null,
+                    LastModified = new DirectoryInfo(folder).LastWriteTime
+
+                });
+            }
+            return result.OrderByDescending(x=>x.LastModified).ToList();
         }
 
         private FileTypes GetFileType(string fileName)
@@ -50,7 +65,7 @@ namespace cloud.core.api.Services
                 return FileTypes.Other;
             }
         }
-        private async Task<string> GetFileThumbnailAsync(string fileName)
+        public async Task<string> GetFileThumbnailAsync(string fileName)
         {
             switch(GetFileType(fileName))
                 {
@@ -62,7 +77,7 @@ namespace cloud.core.api.Services
                         byte[] imageArray = System.IO.File.ReadAllBytes(output);
                         string base64ImageRepresentation = Convert.ToBase64String(imageArray);
                         File.Delete(output);
-                        return base64ImageRepresentation;
+                        return "data:image/png;base64,"+base64ImageRepresentation;
                     }
                 case FileTypes.Image:
                     {
@@ -72,6 +87,28 @@ namespace cloud.core.api.Services
                     }
                 default:
                     return null;
+            }
+        }
+        public async Task<string> TranscodeVideoToMp4(string inputFilePath)
+        {
+            try
+            {
+                
+                var outputPath = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(inputFilePath)), $"{Path.GetFileNameWithoutExtension(inputFilePath)}_transcoded.mp4");
+
+                var mediaInfo = await FFmpeg.GetMediaInfo(inputFilePath);
+                var conversion = await FFmpeg.Conversions.New()
+                    .AddParameter($"-i {Path.GetFullPath(inputFilePath)}")
+                    .SetOutput(outputPath)
+                    .SetOutputFormat(Format.mp4)
+                    .Start();
+
+                return outputPath;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Błąd podczas transkodowania pliku wideo: {ex.Message}");
+                return null;
             }
         }
     }

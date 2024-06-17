@@ -9,6 +9,7 @@ namespace cloud.core.objects.Model
 		public FileTypes Type { get; set; }
 		public long Size { get; set; }
 		public string Thumbnail { get; set; }
+		public DateTime LastModified { get; set; }
 	}
 }
 

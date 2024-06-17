@@ -10,3 +10,4 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/refint/cloud.core.objects.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.pdb
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/ref/cloud.core.objects.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.objects/obj/Debug/net8.0/cloud.core.objects.sourcelink.json
