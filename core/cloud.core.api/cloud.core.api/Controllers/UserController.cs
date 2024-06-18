@@ -11,21 +11,21 @@ using cloud.core.objects.Model;
 using cloud.core.api.Services;
 using Microsoft.EntityFrameworkCore;
 using cloud.core.database.interf;
+using RestEase;
 
 [Route("api/[controller]")]
 [ApiController]
 public class UserController : ControllerBase
 {
     private readonly UserService _userService;
-    private readonly IDbUserApi _userApi;
+    private readonly IDbUserApi _userApi= RestClient.For<IDbUserApi>("http://cloud.core.database");
+
 
     public UserController(
-              UserService userService,
-              IDbUserApi userApi
+              UserService userService
 )
     {
         _userService = userService;
-        _userApi = userApi;
     }
 
     [HttpPost]
@@ -47,7 +47,14 @@ public class UserController : ControllerBase
             var u =await _userApi.Adduser(user);
 
             var token = _userService.GenerateJwtToken(u);
-            return Ok(new { Token = token });
+            var newRefreshToken = _userService.GenerateRefreshToken();
+            await _userApi.PutSaveRefreshToken(newRefreshToken,u.Id);
+            return Ok(new TokenViewModel()
+            {
+                AccessToken = token,
+                RefreshToken = newRefreshToken
+            });
+
         }
 
         return BadRequest(ModelState);
@@ -69,6 +76,29 @@ public class UserController : ControllerBase
 
         return BadRequest(ModelState);
     }
+    [HttpPost("refresh")]
+    public async Task<IActionResult> RefreshAsync([FromBody] TokenViewModel request)
+    {
+        var principal = _userService.GetPrincipalFromExpiredToken(request.AccessToken);
+        if (principal == null)
+            return BadRequest("Invalid access token");
 
-   
+        var expiryDateUnix = long.Parse(principal.Claims.Single(x => x.Type == JwtRegisteredClaimNames.Exp).Value);
+        var expiryDateTimeUtc = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)
+            .AddSeconds(expiryDateUnix);
+
+        if (expiryDateTimeUtc > DateTime.UtcNow)
+            return BadRequest("This token hasn't expired yet");
+
+        var newAccessToken = _userService.GenerateAccessToken(principal.Claims);
+        var newRefreshToken = _userService.GenerateRefreshToken();
+        await _userApi.PutSaveRefreshToken(newRefreshToken, int.Parse(principal.Claims.FirstOrDefault(x=>x.Type=="id").Value));
+
+        return Ok(new TokenViewModel()
+        {
+            AccessToken = newAccessToken,
+            RefreshToken = newRefreshToken
+        });
+    }
+
 }

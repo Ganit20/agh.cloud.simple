@@ -11,15 +11,15 @@
   <MonoDevelop.Ide.ItemProperties.database.cloud.core.database PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="cloud.core.api/Controllers/UserController.cs">
     <Files>
-      <File FileName="cloud.core.api/Program.cs" Line="29" Column="45" />
+      <File FileName="cloud.core.api/Program.cs" />
       <File FileName="docker-compose.yml" />
       <File FileName="cloud.core.api/Dockerfile" />
       <File FileName="cloud.core.database/Program.cs" />
       <File FileName="cloud.core.database/Dockerfile" />
-      <File FileName="../cloud.core.database.interf/IDbUserApi.cs" />
+      <File FileName="../cloud.core.database.interf/IDbUserApi.cs" Line="18" Column="20" />
       <File FileName="cloud.core.api/Properties/launchSettings.json" />
-      <File FileName="cloud.core.api/appsettings.json" Line="13" Column="31" />
-      <File FileName="cloud.core.api/Controllers/FileController.cs" Line="134" Column="20" />
+      <File FileName="cloud.core.api/appsettings.json" />
+      <File FileName="cloud.core.api/Controllers/FileController.cs" />
       <File FileName="cloud.core.database/appsettings.json" />
       <File FileName="cloud.core.database/Properties/launchSettings.json" />
       <File FileName="cloud.core.api/appsettings.Development.json" />
@@ -27,34 +27,47 @@
       <File FileName="cloud.core.api/cloud.core.api.http" />
       <File FileName="docker-compose.override.yml" />
       <File FileName="cloud.core.objects/Enums/FileTypes.cs" />
-      <File FileName="cloud.core.api/Services/FileService.cs" Line="1" Column="1" />
+      <File FileName="cloud.core.api/Services/FileService.cs" />
       <File FileName="cloud.core.api/WeatherForecast.cs" />
       <File FileName="cloud.core.objects/Model/FilePreview.cs" />
       <File FileName="cloud.core.objects/Model/CreateFolderRequest.cs" />
-      <File FileName="cloud.core.database/DbContext/CloudDbContext.cs" />
-      <File FileName="cloud.core.objects/Database/DbUserFilesData.cs" Line="11" Column="37" />
-      <File FileName="cloud.core.database/Controllers/FileController.cs" Line="50" Column="14" />
+      <File FileName="cloud.core.database/DbContext/CloudDbContext.cs" Line="14" Column="34" />
+      <File FileName="cloud.core.objects/Database/DbUserFilesData.cs" Line="12" Column="1" />
+      <File FileName="cloud.core.database/Controllers/FileController.cs" Line="13" Column="1" />
       <File FileName="../cloud.core.database.interf/IDbFileApi.cs" />
-      <File FileName="cloud.core.objects/Database/DbUser.cs" Line="7" Column="15" />
-      <File FileName="cloud.core.api/Services/UserService.cs" Line="10" Column="26" />
-      <File FileName="cloud.core.api/Controllers/UserController.cs" Line="48" Column="50" />
+      <File FileName="cloud.core.objects/Database/DbUser.cs" Line="17" Column="26" />
+      <File FileName="cloud.core.api/Services/UserService.cs" Line="83" Column="10" />
+      <File FileName="cloud.core.api/Controllers/UserController.cs" Line="50" Column="87" />
       <File FileName="cloud.core.objects/Model/User.cs" Line="7" Column="15" />
-      <File FileName="cloud.core.objects/Model/LoginRequest.cs" Line="15" Column="1" />
-      <File FileName="cloud.core.objects/Model/RegisterRequest.cs" Line="8" Column="12" />
+      <File FileName="cloud.core.objects/Model/LoginRequest.cs" />
+      <File FileName="cloud.core.objects/Model/RegisterRequest.cs" />
+      <File FileName="cloud.core.database/Controllers/UserController.cs" Line="30" Column="33" />
+      <File FileName="../../../../.microsoft/usersecrets/56854a46-7390-4107-84ad-90355c38b065/secrets.json" Line="3" Column="2" />
+      <File FileName="cloud.core.objects/Model/AddUserRequest.cs" Line="7" Column="29" />
+      <File FileName="cloud.core.objects/Database/DbSubscription.cs" Line="6" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="cloud.core.api">
             <Node name="api">
-              <Node name="cloud.core.api">
-                <Node name="Controllers">
+              <Node name="cloud.core.api" expanded="True">
+                <Node name="Controllers" expanded="True">
                   <Node name="UserController.cs" selected="True" />
                 </Node>
+                <Node name="Services" expanded="True" />
               </Node>
             </Node>
-            <Node name="cloud.core.objects">
+            <Node name="database" expanded="True">
+              <Node name="cloud.core.database" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="DbContext" expanded="True" />
+              </Node>
+              <Node name="cloud.core.database.interf" expanded="True" />
+            </Node>
+            <Node name="cloud.core.objects" expanded="True">
               <Node name="Database" expanded="True" />
+              <Node name="Model" expanded="True" />
             </Node>
           </Node>
         </State>

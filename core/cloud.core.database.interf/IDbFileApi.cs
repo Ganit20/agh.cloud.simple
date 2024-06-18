@@ -13,7 +13,7 @@ namespace cloud.core.database.interf
         [Delete("removeFile")]
         public Task RemoveFile(int userId, double fileSize);
         [Get("getUserFileData/{userId}")]
-        public  Task GetUserFileData(int userId);
+        public  Task GetUserFileData([Path]int userId);
 
     }
 }

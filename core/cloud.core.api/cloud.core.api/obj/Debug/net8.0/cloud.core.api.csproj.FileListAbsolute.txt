@@ -53,3 +53,5 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/DevOne.Security.Cryptography.BCrypt.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.api/bin/Debug/net8.0/BCrypt.Net-Next.dll

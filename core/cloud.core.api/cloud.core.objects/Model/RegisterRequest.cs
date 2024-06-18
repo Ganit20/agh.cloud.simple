@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace cloud.core.objects.Model
 {
-	public class RegisterRequest
+
+    public class RegisterRequest
 	{
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email address")]

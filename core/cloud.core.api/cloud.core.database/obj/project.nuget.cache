@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "hTPWjN21Mnz2WJUbyKBD+75G91JkjGNtz1Lhwt7a1M+uQKsildNDwhfhgEE1xwlQrp3EwQc1RT08DMiMlNftVw==",
+  "dgSpecHash": "OSqdVpmWD6NhgxBoRWjtshZzKB3jr5Z4sbudG3/sr2PECHKWspBITZHTiE85GkYSldu5GCyYODpzj9wnWNjMvg==",
   "success": true,
   "projectFilePath": "/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/cloud.core.database.csproj",
   "expectedPackageFiles": [
     "/Users/bartlomiejsulek/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/mapster.dependencyinjection/1.0.1/mapster.dependencyinjection.1.0.1.nupkg.sha512",
+    "/Users/bartlomiejsulek/.nuget/packages/mapster.efcore/5.1.1/mapster.efcore.5.1.1.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http/2.2.2/microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "/Users/bartlomiejsulek/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

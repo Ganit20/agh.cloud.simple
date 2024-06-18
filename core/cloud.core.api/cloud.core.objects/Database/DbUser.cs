@@ -13,7 +13,9 @@ namespace cloud.core.objects.Database
 		public DateTime CreateDate { get; set; }
 		public int SubscriptionId { get; set; }
 		public int StatusId { get; set; }
-		[ForeignKey(nameof(SubscriptionId))]
+        public string? RefreshToken { get; set; }
+
+        [ForeignKey(nameof(SubscriptionId))]
 		public virtual DbSubscription Subscription { get; set; }
 		public virtual DbUserFilesData Data { get; set; }
 	}

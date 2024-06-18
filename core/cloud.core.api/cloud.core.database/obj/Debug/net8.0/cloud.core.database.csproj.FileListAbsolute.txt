@@ -109,3 +109,9 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/RestEase.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/cloud.core.database.interf.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/cloud.core.database.interf.pdb
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/AutoMapper.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/Mapster.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/Mapster.Core.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/Mapster.DependencyInjection.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/cloud.core.database/bin/Debug/net8.0/Mapster.EFCore.dll

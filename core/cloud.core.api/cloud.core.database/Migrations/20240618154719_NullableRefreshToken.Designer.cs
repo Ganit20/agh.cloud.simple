@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using cloud.core.database.DbContexts;
@@ -11,9 +12,11 @@ using cloud.core.database.DbContexts;
 namespace cloud.core.database.Migrations
 {
     [DbContext(typeof(CloudDbContext))]
-    partial class CloudDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240618154719_NullableRefreshToken")]
+    partial class NullableRefreshToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,14 +43,6 @@ namespace cloud.core.database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("subscriptions", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            MaximmumSpace = 1000000.0,
-                            Name = "Test subscription"
-                        });
                 });
 
             modelBuilder.Entity("cloud.core.objects.Database.DbUser", b =>

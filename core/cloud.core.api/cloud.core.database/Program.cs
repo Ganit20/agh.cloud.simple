@@ -1,5 +1,6 @@
 ﻿using cloud.core.database.Config;
 using cloud.core.database.DbContexts;
+using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CloudDbContext>(x => x.UseNpgsql(builder.Configuration.GetValue<string>("DatabaseConfig:ConnectionString")));
 builder.Services.Configure<DatabaseConfig>(builder.Configuration.GetSection("DatabaseConfig"));
+builder.Services.AddMapster();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

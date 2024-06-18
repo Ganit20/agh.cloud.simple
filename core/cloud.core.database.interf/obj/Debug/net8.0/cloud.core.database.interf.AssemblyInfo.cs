@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cloud.core.database.interf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f34ee101b00d7680ffbfb25cdd0aa9021dd82db8")]
 [assembly: System.Reflection.AssemblyProductAttribute("cloud.core.database.interf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cloud.core.database.interf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

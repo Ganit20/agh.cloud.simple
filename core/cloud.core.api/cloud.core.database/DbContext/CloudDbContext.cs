@@ -29,15 +29,20 @@ namespace cloud.core.database.DbContexts
 				entity.HasKey(x => x.Id);
 				entity.ToTable("subscriptions");
 				entity.HasMany(x => x.Users).WithOne(x => x.Subscription);
-				
-			});
+				entity.HasData(new DbSubscription() { Id = 1, MaximmumSpace = 1000000, Name = "Test subscription" });
+
+
+
+            });
 			modelBuilder.Entity<DbUserFilesData>(entity =>
 			{
 				entity.HasKey(x => x.UserId);
 				entity.ToTable("user_files_data");
 				entity.HasOne(x => x.User).WithOne(x => x.Data);
 			});
-		}
+
+            
+        }
 	}
 }
 

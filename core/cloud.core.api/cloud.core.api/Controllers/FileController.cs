@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using cloud.core.api.Services;
@@ -27,7 +29,7 @@ namespace cloud.core.api.Controllers
         [HttpGet]
         public async Task<List<FilePreview>> GetFiles([FromQuery] string? path)
         {
-            var userId = "user";
+            var userId = User.Claims.FirstOrDefault(x=>x.Type== ClaimTypes.NameIdentifier).Value;
             if (!Directory.Exists(userId))
                 Directory.CreateDirectory(userId);
                 return await this.fileService.GetFileList(path==null?userId:userId+path);
@@ -37,7 +39,7 @@ namespace cloud.core.api.Controllers
         [HttpPost]
         public async Task<ActionResult> UploadFile([FromBody] UploadFileRequest request)
         {
-            var userId = "user";
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
             if (!Directory.Exists(userId))
                 Directory.CreateDirectory(userId);
             request.Path = userId + request.Path;
@@ -47,23 +49,18 @@ namespace cloud.core.api.Controllers
             }
             string base64Data = request.File.Replace("data:" + request.Type + ";base64,", string.Empty);
 
-            // Konwersja danych Base64 na bajty
             byte[] fileBytes = System.Convert.FromBase64String(base64Data);
 
-            // Utworzenie ścieżki do zapisu pliku
             string filePath = Path.Combine(request.Path, request.Name);
 
             try
             {
-                // Zapis pliku na serwerze
                 await System.IO.File.WriteAllBytesAsync(filePath, fileBytes);
 
-                // Zwrócenie sukcesu
                 return Ok("Plik został pomyślnie zapisany.");
             }
             catch (IOException ex)
             {
-                // Obsługa błędów związanych z zapisem pliku
                 return StatusCode(500, $"Wystąpił błąd podczas zapisu pliku: {ex.Message}");
             }
 
@@ -73,7 +70,7 @@ namespace cloud.core.api.Controllers
         [HttpPost("folder")]
         public async Task<ActionResult> CreateFolder([FromBody] CreateFolderRequest request)
         {
-            var userId = "user";
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
             if (!Directory.Exists(userId))
                 Directory.CreateDirectory(userId);
             if (Directory.Exists(Path.Combine(userId, request.Path))) {
@@ -86,7 +83,7 @@ namespace cloud.core.api.Controllers
         [HttpDelete]
         public async Task<ActionResult> DeleteFile([FromQuery] string? path)
         {
-            var userId = "user";
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
             if (!Directory.Exists(userId))
                 Directory.CreateDirectory(userId);
             if (Directory.Exists(userId+ path))
@@ -103,30 +100,25 @@ namespace cloud.core.api.Controllers
         [HttpGet("download")]
         public async Task<ActionResult> DownloadFile([FromQuery] string? path)
         {
-            var userId = "user";
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
             if (!Directory.Exists(userId))
                 Directory.CreateDirectory(userId);
             
                 try
                 {
-                    // Pełna ścieżka do żądanego pliku
                     string filePath = userId+ path;
 
-                    // Sprawdzenie, czy plik istnieje
                     if (!System.IO.File.Exists(filePath))
                     {
-                        return NotFound(); // Plik nie istnieje
+                        return NotFound(); 
                     }
 
-                    // Pobranie pliku jako tablicy bajtów
                     byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
 
-                    // Zwrócenie pliku jako strumienia bajtów
                     return File(fileBytes, "application/octet-stream", filePath.Substring(filePath.LastIndexOf("/") + 1));
                 }
                 catch (Exception ex)
                 {
-                    // Obsługa wyjątków
                     return StatusCode(500, $"Wystąpił błąd: {ex.Message}");
                 }
             
@@ -135,15 +127,12 @@ namespace cloud.core.api.Controllers
         [HttpGet("stream")]
         public async Task<IActionResult> StreamVideo([FromQuery] string? path)
         {
-            var userId = "user";
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
 
             if (!System.IO.File.Exists(userId + path))
             {
                 return NotFound();
             }
-
-            // Transkodowanie pliku w locie do formatu mp4
-            //var transcodedFilePath = await this.fileService.TranscodeVideoToMp4(userId + path);
 
             if (string.IsNullOrEmpty(userId + path))
             {

@@ -40,3 +40,7 @@
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Protocols.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Logging.dll
 /Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Microsoft.IdentityModel.Abstractions.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/BCrypt.Net-Next.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Mapster.DependencyInjection.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Mapster.dll
+/Users/bartlomiejsulek/Studia/cloud/core/cloud.core.api/bin/Debug/Mapster.Core.dll

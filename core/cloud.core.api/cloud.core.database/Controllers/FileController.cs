@@ -7,7 +7,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace cloud.core.database.Controllers
 {
-	public class FileController:ControllerBase, IDbFileApi
+    [Route("api/[controller]")]
+    [ApiController]
+
+    public class FileController:ControllerBase, IDbFileApi
     {
         private readonly CloudDbContext _context;
 
