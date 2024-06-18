@@ -32,7 +32,6 @@ import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
     ButtonModule,
     CardModule,
     ImageModule,
@@ -59,6 +58,6 @@ import { DialogModule } from 'primeng/dialog';
   ],
   bootstrap: [AppComponent],
 
-  providers: [FileService, provideAnimationsAsync()],
+  providers: [FileService],
 })
 export class MainModuleModule {}

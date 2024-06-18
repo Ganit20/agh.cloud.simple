@@ -14,7 +14,8 @@ namespace cloud.core.database.DbContexts
         public virtual DbSet<DbUser> Users { get; set; }
 		public virtual DbSet<DbSubscription> Subscriptions { get; set; }
 		public virtual DbSet<DbUserFilesData> UserFilesData { get; set; }
-       
+        public virtual DbSet<DbFileShareLink> FileShareLinks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<DbUser>(entity =>
@@ -29,7 +30,7 @@ namespace cloud.core.database.DbContexts
 				entity.HasKey(x => x.Id);
 				entity.ToTable("subscriptions");
 				entity.HasMany(x => x.Users).WithOne(x => x.Subscription);
-				entity.HasData(new DbSubscription() { Id = 1, MaximmumSpace = 1000000, Name = "Test subscription" });
+				entity.HasData(new DbSubscription() { Id = 1, MaximmumSpace = 107374182.4, Name = "Test subscription" });
 
 
 
@@ -40,9 +41,14 @@ namespace cloud.core.database.DbContexts
 				entity.ToTable("user_files_data");
 				entity.HasOne(x => x.User).WithOne(x => x.Data);
 			});
+            modelBuilder.Entity<DbFileShareLink>(entity =>
+            {
+                entity.HasKey(x => x.Id);
+                entity.ToTable("file_share_links");
+            });
 
-            
+
         }
-	}
+    }
 }
 

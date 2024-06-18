@@ -12,6 +12,8 @@ using cloud.core.api.Services;
 using Microsoft.EntityFrameworkCore;
 using cloud.core.database.interf;
 using RestEase;
+using RestEase.Implementation;
+using Microsoft.AspNetCore.Authorization;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -27,9 +29,9 @@ public class UserController : ControllerBase
     {
         _userService = userService;
     }
+    
 
-    [HttpPost]
-    [Route("register")]
+    [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
         if (ModelState.IsValid)
@@ -60,8 +62,7 @@ public class UserController : ControllerBase
         return BadRequest(ModelState);
     }
 
-    [HttpPost]
-    [Route("login")]
+    [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
         if (ModelState.IsValid)
@@ -71,7 +72,13 @@ public class UserController : ControllerBase
                 return Unauthorized("Invalid login attempt.");
 
             var token = _userService.GenerateJwtToken(user);
-            return Ok(new { Token = token });
+            var newRefreshToken = _userService.GenerateRefreshToken();
+            await _userApi.PutSaveRefreshToken(newRefreshToken, user.Id);
+            return Ok(new TokenViewModel()
+            {
+                AccessToken = token,
+                RefreshToken = newRefreshToken
+            });
         }
 
         return BadRequest(ModelState);
@@ -100,5 +107,14 @@ public class UserController : ControllerBase
             RefreshToken = newRefreshToken
         });
     }
+    [Authorize]
+    [HttpGet("file/info")]
+    public async Task<IActionResult> GetUserFileInfo()
+    {
+        var userId = int.Parse(User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value);
+
+        return Ok(await _userApi.GetUserFileInfo(userId));
+            
+     }
 
 }

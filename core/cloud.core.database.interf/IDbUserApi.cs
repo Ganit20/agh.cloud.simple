@@ -19,7 +19,10 @@ public interface IDbUserApi
     public const string PutSaveRefreshTokenPath = "{refreshToken}/{id}";
     [Put(PutSaveRefreshTokenPath)]
     public Task PutSaveRefreshToken([Path] string refreshToken, [Path] int id);
+    public const string GetUserFileInfoPath = "file/info/{id}";
 
+    [Get(GetUserFileInfoPath)]
+    public Task<UserFileInfo> GetUserFileInfo([Path] int id);
 }
 
 

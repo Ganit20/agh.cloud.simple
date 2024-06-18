@@ -60,6 +60,13 @@ namespace cloud.core.database.Controllers
             await _context.SaveChangesAsync();
             return (entity.Entity).Adapt<User>();
         }
+        [HttpGet(IDbUserApi.GetUserFileInfoPath)]
+        public async Task<UserFileInfo> GetUserFileInfo([Path] int id)
+        {
+            var user = await _context.Users.Include(x => x.Subscription).Include(x => x.Data).FirstOrDefaultAsync(x => x.Id == id);
+            return new UserFileInfo() { FileSaved = user.Data.FileSaved, MaxCapacity = user.Subscription.MaximmumSpace, SpaceUsed = user.Data.SpaceUsed, SubscriptionName = user.Subscription.Name };
+        }
+
     }
 }
 

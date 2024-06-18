@@ -2,6 +2,8 @@
 using cloud.core.database.DbContexts;
 using cloud.core.database.interf;
 using cloud.core.objects.Database;
+using cloud.core.objects.Model;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -72,11 +74,30 @@ namespace cloud.core.database.Controllers
 
         }
 
-        [HttpGet("getUserFileData/{userId}")]
-        public async Task GetUserFileData(int userId)
+        [HttpPost("share")]
+        public async Task<Guid> CreateShareLink([FromBody] FileShareRequest request)
         {
-            var userFileData = await _context.UserFilesData.FirstOrDefaultAsync(u => u.UserId == userId);
+            var shareLink = new DbFileShareLink
+            {
+                Id = Guid.NewGuid(),
+                FilePath = request.FilePath,
+                CreatedAt = DateTime.UtcNow,
+                ExpiryDate = request.ExpiryDate,
+            };
+
+            _context.FileShareLinks.Add(shareLink);
+            await _context.SaveChangesAsync();
+            return shareLink.Id;
         }
+
+        [HttpGet("shared/{id}")]
+        public async Task<FileShareLink> GetSharedFile(Guid id)
+        {
+            return (await _context.FileShareLinks.SingleOrDefaultAsync(f => f.Id == id && f.IsActive)).Adapt< FileShareLink>();
+
+          
+        }
+
     }
 }
 

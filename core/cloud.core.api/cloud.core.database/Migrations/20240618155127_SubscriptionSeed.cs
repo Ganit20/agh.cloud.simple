@@ -13,7 +13,7 @@ namespace cloud.core.database.Migrations
             migrationBuilder.InsertData(
                 table: "subscriptions",
                 columns: new[] { "Id", "MaximmumSpace", "Name" },
-                values: new object[] { 1, 1000000.0, "Test subscription" });
+                values: new object[] { 1, 107374182.4, "Test subscription" });
         }
 
         /// <inheritdoc />

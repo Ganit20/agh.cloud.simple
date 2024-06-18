@@ -7,9 +7,15 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using cloud.core.api.Services;
+using cloud.core.database.interf;
+using cloud.core.objects.Database;
+using cloud.core.objects.Enums;
 using cloud.core.objects.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RestEase;
+using RestEase.Implementation;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -21,7 +27,10 @@ namespace cloud.core.api.Controllers
     public class FileController : ControllerBase
     {
         FileService fileService;
-        public FileController(FileService fileService)
+        IDbFileApi dbFileApi= RestClient.For<IDbFileApi>("http://cloud.core.database");
+        private readonly IDbUserApi _userApi = RestClient.For<IDbUserApi>("http://cloud.core.database");
+
+        public FileController(FileService fileService )
         {
             this.fileService = fileService;
         }
@@ -43,6 +52,10 @@ namespace cloud.core.api.Controllers
             if (!Directory.Exists(userId))
                 Directory.CreateDirectory(userId);
             request.Path = userId + request.Path;
+            var userSpaceInfo = await this._userApi.GetUserFileInfo(int.Parse(userId));
+            if(userSpaceInfo.SpaceUsed+request.File.Length>userSpaceInfo.MaxCapacity)
+                return BadRequest("Brak miejsca!");
+
             if (string.IsNullOrEmpty(request.File) || string.IsNullOrEmpty(request.Name) || string.IsNullOrEmpty(request.Type))
             {
                 return BadRequest("Wszystkie pola są wymagane.");
@@ -56,7 +69,7 @@ namespace cloud.core.api.Controllers
             try
             {
                 await System.IO.File.WriteAllBytesAsync(filePath, fileBytes);
-
+                await dbFileApi.AddFile(int.Parse(userId), fileBytes.Length);
                 return Ok("Plik został pomyślnie zapisany.");
             }
             catch (IOException ex)
@@ -90,10 +103,13 @@ namespace cloud.core.api.Controllers
             {
                 Directory.Delete(userId + path);
             }
+            double size = new FileInfo(userId + path).Length;
             if (System.IO.File.Exists(userId + path))
             {
                 System.IO.File.Delete(userId + path);
             }
+            await dbFileApi.RemoveFile(int.Parse(userId), size);
+
             return Ok();
         }
         [Authorize]
@@ -143,8 +159,23 @@ namespace cloud.core.api.Controllers
 
             return File(stream, "video/mp4");
         }
+        [HttpPost("share")]
+        public async Task<IActionResult> CreateShareLink([FromBody] FileShareRequest request)
+        {
 
-     
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
+            request.FilePath = userId + request.FilePath;
+            return Ok("localhost:4200/file/"+ await this.dbFileApi.CreateShareLink(request));
+        }
+
+        [HttpGet("shared/{id}")]
+        public async Task<IActionResult> GetSharedFileAsync(Guid id)
+        {
+
+            var fileInfo = await this.dbFileApi.GetSharedFile(id);
+            return Ok(await this.fileService.GetFile(fileInfo.FilePath));
+        }
+
     }
 }
 

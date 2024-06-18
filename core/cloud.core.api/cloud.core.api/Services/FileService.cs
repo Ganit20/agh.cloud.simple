@@ -40,7 +40,19 @@ namespace cloud.core.api.Services
             }
             return result.OrderByDescending(x=>x.LastModified).ToList();
         }
+        public async Task<FilePreview> GetFile(string path)
+        {
+            var fileList = Directory.GetFiles(path);
+                return new FilePreview()
+                {
+                    Name = path.Substring(path.LastIndexOf("/") + 1),
+                    Size = new FileInfo(path).Length,
+                    Type = GetFileType(path),
+                    Thumbnail = await GetFileThumbnailAsync(path),
+                    LastModified = new FileInfo(path).LastWriteTime
 
+                };
+        }
         private FileTypes GetFileType(string fileName)
         {
             var extension = new FileInfo(fileName).Extension;
