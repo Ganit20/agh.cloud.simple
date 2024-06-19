@@ -6,6 +6,7 @@ using cloud.core.objects.Model;
 using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RestEase;
 
 namespace cloud.core.database.Controllers
 {
@@ -96,6 +97,20 @@ namespace cloud.core.database.Controllers
             return (await _context.FileShareLinks.SingleOrDefaultAsync(f => f.Id == id && f.IsActive)).Adapt< FileShareLink>();
 
           
+        }
+        [HttpGet("shared/all/{id}")]
+        public async Task<List<FileShareLink>> GetAllSharedFiles(int id)
+        {
+            return (await _context.FileShareLinks.Where(f => f.FilePath.StartsWith(id.ToString())).ToListAsync()).Adapt<List<FileShareLink>>();
+
+
+        }
+        [HttpGet("shared/deactivate/{id}")]
+        public async Task DeactivateLink([Path] Guid id)
+        {
+            var link =await _context.FileShareLinks.FirstOrDefaultAsync(x => x.Id == id);
+            link.IsActive = false;
+            await _context.SaveChangesAsync();
         }
 
     }

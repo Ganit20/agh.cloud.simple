@@ -42,7 +42,6 @@ namespace cloud.core.api.Services
         }
         public async Task<FilePreview> GetFile(string path)
         {
-            var fileList = Directory.GetFiles(path);
                 return new FilePreview()
                 {
                     Name = path.Substring(path.LastIndexOf("/") + 1),

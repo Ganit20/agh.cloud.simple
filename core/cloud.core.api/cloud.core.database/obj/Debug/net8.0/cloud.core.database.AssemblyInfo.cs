@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cloud.core.database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d277e34cbc7637499f79625c2e94901273c19483")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ac797be676cbeb0f88fb57711a33540ae617a31")]
 [assembly: System.Reflection.AssemblyProductAttribute("cloud.core.database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cloud.core.database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -139,11 +139,10 @@ namespace cloud.core.api.Controllers
                 }
             
         }
-        [Authorize]
-        [HttpGet("stream")]
-        public async Task<IActionResult> StreamVideo([FromQuery] string? path)
+        [HttpGet("stream/{id}")]
+        public async Task<IActionResult> StreamVideo([FromQuery] string? path,int id)
         {
-            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
+            var userId = id.ToString();
 
             if (!System.IO.File.Exists(userId + path))
             {
@@ -160,22 +159,51 @@ namespace cloud.core.api.Controllers
             return File(stream, "video/mp4");
         }
         [HttpPost("share")]
+        [Authorize]
+
         public async Task<IActionResult> CreateShareLink([FromBody] FileShareRequest request)
         {
 
             var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
             request.FilePath = userId + request.FilePath;
-            return Ok("localhost:4200/file/"+ await this.dbFileApi.CreateShareLink(request));
+            return Ok("http://localhost:4200/file/"+ await this.dbFileApi.CreateShareLink(request));
         }
 
-        [HttpGet("shared/{id}")]
+        [HttpGet("share/{id}")]
         public async Task<IActionResult> GetSharedFileAsync(Guid id)
         {
 
             var fileInfo = await this.dbFileApi.GetSharedFile(id);
+            if (!fileInfo.IsActive)
+                return BadRequest();
             return Ok(await this.fileService.GetFile(fileInfo.FilePath));
         }
+        [HttpGet("share/all")]
+        public async Task<IActionResult> GetAllSharedFiles()
+        {
+            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier).Value;
 
+            return Ok(await this.dbFileApi.GetAllSharedFiles(int.Parse(userId)));
+
+        }
+        [HttpGet("share/download/{id}")]
+        public async Task<IActionResult> DownloadSharedFile(Guid id)
+        {
+            var fileInfo = await this.dbFileApi.GetSharedFile(id);
+            if (!fileInfo.IsActive)
+                return BadRequest();
+
+            return Ok(await this.DownloadFile(fileInfo.FilePath));
+
+        }
+        [Authorize]
+        [HttpPut("share/deactivate/{id}")]
+        public async Task<IActionResult> GetAllSharedFiles(Guid id)
+        {
+            await this.dbFileApi.DeactivateLink(id);
+            return Ok();
+
+        }
     }
 }
 
